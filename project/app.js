@@ -9,6 +9,19 @@
 // Целые числа; Переменные; Ввод / вывод данных; Условный оператор; Цикл; Бесконечный цикл;
 // Операторы break, continue; Работа с модулем random для генерации случайных чисел; Функции.
 
-let num = Math.floor(Math.random()*100);
+let num = Math.floor(Math.random() * 100);
 
-let prompt = prompt('Введите число от 0 до 100');
+let value = prompt('Введите число от 0 до 100');
+
+function Binary(num_, value_) {
+    let startindex = 0;
+    let endindex = 100;
+    for (let i = startindex; i < endindex; i++) {
+        let midl = Math.floor((startindex + endindex) / 2);
+        
+    }
+
+}
+Binary (num, value)
+
+
