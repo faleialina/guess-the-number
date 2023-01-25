@@ -18,10 +18,21 @@ function Binary(num_, value_) {
     let endindex = 100;
     for (let i = startindex; i < endindex; i++) {
         let midl = Math.floor((startindex + endindex) / 2);
-        
+        if (value_ === num_) {
+            console.log('Вы угадали, поздравляем!');
+        } else if (value_ > midl) {
+            startindex = midl;
+            console.log('Слишком много, попробуйте еще раз');
+
+        } else if (value_ < midl) {
+            endindex = midl;
+            console.log('Слишком мало, попробуйте еще раз');
+
+        }
+
     }
 
 }
-Binary (num, value)
+Binary(num, value)
 
 
