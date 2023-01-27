@@ -9,30 +9,25 @@
 // Целые числа; Переменные; Ввод / вывод данных; Условный оператор; Цикл; Бесконечный цикл;
 // Операторы break, continue; Работа с модулем random для генерации случайных чисел; Функции.
 
-let num = Math.floor(Math.random() * 100);
+let num = Math.round(Math.random() * 100);
 
-let value = prompt('Введите число от 0 до 100');
-
-function Binary(num_, value_) {
+function Binary(num_) {
     let startindex = 0;
     let endindex = 100;
     for (let i = startindex; i < endindex; i++) {
-        let midl = Math.floor((startindex + endindex) / 2);
-        if (value_ === num_) {
+        const midl = prompt(`Введите среднее значение от ${startindex} до ${endindex}`);
+        if (midl == num_) {
             console.log('Вы угадали, поздравляем!');
-        } else if (value_ > midl) {
+            break
+        } else if (num_ > midl) {
             startindex = midl;
             console.log('Слишком много, попробуйте еще раз');
-
-        } else if (value_ < midl) {
+        } else if (num_ < midl) {
             endindex = midl;
             console.log('Слишком мало, попробуйте еще раз');
-
         }
-
     }
-
 }
-Binary(num, value)
+Binary(num)
 
 
