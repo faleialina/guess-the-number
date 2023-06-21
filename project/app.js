@@ -15,16 +15,16 @@ function Binary(num_) {
     let startindex = 0;
     let endindex = 100;
     for (let i = startindex; i < endindex; i++) {
-        const midl = prompt(`Введите среднее значение от ${startindex} до ${endindex}`);
+        const midl = prompt(`Enter an average value from ${startindex} to ${endindex}`);
         if (midl == num_) {
-            console.log('Вы угадали, поздравляем!');
+            console.log('You guessed it, congratulations!');
             break
         } else if (num_ > midl) {
             startindex = midl;
-            console.log('Слишком много, попробуйте еще раз');
+            console.log('Too much, try again');
         } else if (num_ < midl) {
             endindex = midl;
-            console.log('Слишком мало, попробуйте еще раз');
+            console.log('Too little, try again');
         }
     }
 }
